@@ -30,12 +30,12 @@
 #'   EXAMPLE 1: select cloneNum between 0 and 9
 #'   linG3DClone(pathData="exampleB05", cloneNum=9,  IsGradient=1,
 #'               xmin=-100, xmax=100, ymin=-100, ymax=100,
-#'               tmin=0, tmax=100000, fileStep=2000, toPrint=0))
+#'               tmin=0, tmax=100000, fileStep=2000, toPrint=0)
 #'
 #'   EXAMPLE 2: select cloneNum between 0 and 147
 #'   linG3DClone(pathData="exampleB005", cloneNum=0,  IsGradient=1,
 #'               xmin=-100, xmax=100, ymin=-100, ymax=100,
-#'               tmin=0, tmax=100000, fileStep=2000, toPrint=0))
+#'               tmin=0, tmax=100000, fileStep=2000, toPrint=0)
 #'
 #' @export
 

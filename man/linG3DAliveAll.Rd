@@ -54,12 +54,12 @@ for the examples discussed in the paper use:
   EXAMPLE 1:
   linG3DAliveAll(pathData="exampleB05", numClones=9, IsGradient=1,
                  xmin=-100, xmax=100, ymin=-100, ymax=100,
-                 tmin=0, tmax=100000, fileStep=2000, toPrint=0))
+                 tmin=0, tmax=100000, fileStep=2000, toPrint=0)
 
   EXAMPLE 2:
   linG3DAliveAll(pathData="exampleB005", numClones=147, IsGradient=1,
                  xmin=-100, xmax=100, ymin=-100, ymax=100,
-                 tmin=0, tmax=100000, fileStep=2000, toPrint=0))
+                 tmin=0, tmax=100000, fileStep=2000, toPrint=0)
 
 }
 \author{
