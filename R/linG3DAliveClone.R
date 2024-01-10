@@ -236,6 +236,7 @@ if (Numlast>0) {  # will take care of empty clones
       }
     }
   }
+if (Nmatrix<=0) {print("No survived clones")}
 
 if (Nmatrix>0){
   # define matrix of line segments (3D branches) to draw
@@ -324,9 +325,6 @@ if (toPrint==1){
      rgl.snapshot(paste0(pathFigs,"/tree_clone_",cloneNum,".png"), fmt = "png", top = TRUE)}
  }
 }  # end if Numlast > 0
-
-print("No survived clones")
-
 }  # end function
 
 
