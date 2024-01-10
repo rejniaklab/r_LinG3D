@@ -1,0 +1,10 @@
+Package: LinG3D
+Type: Package
+Title: Visualizing the Spatio-Temporal Dynamics of Clonal Evolution
+Version: 0.0.1.0
+RoxygenNote: 7.2.3
+Depends:readr,rapportools,rgl
+Licence: GNU General Public License v3.0
+       
+        
+       
