@@ -37,6 +37,10 @@
 #'   linG3DAliveClone(pathData="exampleB005", cloneNum=0, IsGradient=1,
 #'                    xmin=-100, xmax=100, ymin=-100, ymax=100,
 #'                    tmin=0, tmax=100000, fileStep=2000, toPrint=0)
+#'
+#'  linG3DAliveClone(pathData="exampleExp",  cloneNum=10, IsGradient=0,
+#'                   xmin=0, xmax=1500, ymin=0, ymax=1000,
+#'                  tmin=0, tmax=864, fileStep=4, toPrint=0)
 #' @export
 
 linG3DAliveClone <- function(pathData, cloneNum, IsGradient,
