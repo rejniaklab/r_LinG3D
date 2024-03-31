@@ -107,7 +107,7 @@ linG3DClone <- function(pathData, cloneNum, IsGradient,
            "#F0E68C","#F5F5DC","#E0FFFF","#00CED1","#FFE4B5","#FF1493","#AFEEEE",
            "#7FFFD4","#B0E0E6","#5F9EA0","#4682B4","#6495ED","#DEB887","#1E90FF",
            "#EEE8AA","#BDB76B","#6B8E23","#7CFC00","#7FFF00","#ADFF2F","#B22222",
-           "#DDA0DD","#FFEBCD"	) #}
+           "#DDA0DD","#FFEBCD") #}
   Ncol <- length(col)
 
   #--------------------------draw background function------------------------------------------#
@@ -124,19 +124,19 @@ linG3DClone <- function(pathData, cloneNum, IsGradient,
           polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                     y=c(kk,kk,kk,kk,kk),
                     z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                    col = "blue",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                    col="blue",fill=TRUE,add=TRUE,plot=TRUE,coords=c(x=1,z=3),alpha=0.25)
 
         } else if ((drug[ii,jj]>=drugmin+drugstep)&&(drug[ii,jj]<drugmin+2*drugstep)) {
           polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                     y=c(kk,kk,kk,kk,kk),
                     z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                    col = "#00FFFF",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                    col="#00FFFF",fill=TRUE,add=TRUE,plot=TRUE,coords=c(x=1,z=3),alpha=0.25)
 
         } else if ((drug[ii,jj]>=drugmin+2*drugstep)&&(drug[ii,jj]<drugmin+3*drugstep)){
           polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                     y=c(kk,kk,kk,kk,kk),
                     z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                    col = "yellow",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                    col="yellow",fill=TRUE,add=TRUE,plot=TRUE,coords = c(x=1,z=3),alpha=0.25)
 
         } else {
           polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),

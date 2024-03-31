@@ -109,7 +109,7 @@ col <- c("#FF00FF","#FF0000","#00FFFF","#0000FF","#00FF00","#000000","#FFBF00",
          "#F0E68C","#F5F5DC","#E0FFFF","#00CED1","#FFE4B5","#FF1493","#AFEEEE",
          "#7FFFD4","#B0E0E6","#5F9EA0","#4682B4","#6495ED","#DEB887","#1E90FF",
          "#EEE8AA","#BDB76B","#6B8E23","#7CFC00","#7FFF00","#ADFF2F","#B22222",
-         "#DDA0DD","#FFEBCD"	) #}
+         "#DDA0DD","#FFEBCD") #}
 Ncol <- length(col)
 
 #--------------------------draw background function------------------------------------------#
@@ -127,19 +127,19 @@ DrawBackground <- function(drug,tmax,timeStep,xmin,xmax,ymin,ymax){
            polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                      y=c(kk,kk,kk,kk,kk),
                      z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                     col = "blue",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                     col="blue",fill=TRUE,add=TRUE,plot=TRUE,coords=c(x=1,z=3),alpha=0.25)
 
          } else if ((drug[ii,jj]>=drugmin+drugstep)&&(drug[ii,jj]<drugmin+2*drugstep)) {
            polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                      y=c(kk,kk,kk,kk,kk),
                      z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                     col = "#00FFFF",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                     col="#00FFFF",fill=TRUE,add=TRUE,plot=TRUE,coords=c(x=1,z=3),alpha=0.25)
 
          } else if ((drug[ii,jj]>=drugmin+2*drugstep)&&(drug[ii,jj]<drugmin+3*drugstep)){
            polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
                      y=c(kk,kk,kk,kk,kk),
                      z=c(ymin+(jj-1)*hgy,ymin+(jj-1)*hgy,ymin+jj*hgy,ymin+jj*hgy,ymin+(jj-1)*hgy),
-                     col = "yellow",fill=TRUE,add = TRUE,plot = TRUE,coords = c(x=1,z=3),alpha=0.25)
+                     col="yellow",fill=TRUE,add=TRUE,plot=TRUE,coords=c(x=1,z=3),alpha=0.25)
 
          } else {
            polygon3d(x=c(xmin+(ii-1)*hgx,xmin+ii*hgx,xmin+ii*hgx,xmin+(ii-1)*hgx,xmin+(ii-1)*hgx),
@@ -178,7 +178,10 @@ indLast <- c(); Nlast <- 0
   }
 Numlast <- Nlast
 
-if (Numlast>0) {  # will take care of empty clones
+if (Numlast<=0) {
+  print("No survived clones")}
+
+else {  # will take care of empty clones
 
   for (ii in 1:Numlast){
     moNum <- hist[indLast[ii],3]
@@ -316,7 +319,7 @@ NumCol <- (cloneNum%%Ncol)+1 # clone color
 
  bgplot3d({ plot.new();
    title(paste0(main = "survived cells from clone = ",cloneNum), line = 0,cex.main=2.5)
-   text(x=0.2,y=0.122,"iterations/time x 200",srt=-41,cex=3) })
+   text(x=0.2,y=0.122,"iterations/time x 200",srt=-41,cex=2) })
 
  for (ii in 1:Nmatrix){
    lines3d(x=c(matrix_to_draw[ii,1],matrix_to_draw[ii,4]),
@@ -329,8 +332,6 @@ if (toPrint==1){
      rgl.snapshot(paste0(pathFigs,"/tree_clone_",cloneNum,".png"), fmt = "png", top = TRUE)}
  }
 }  # end if Numlast > 0
-
-print("No survived clones")
 
 }  # end function
 
