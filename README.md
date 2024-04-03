@@ -8,13 +8,13 @@ This code generates the 3D lineage trees of (1) all clones; (2) individual clone
 
 R: the required libraries are readr, rapportools, rgl, and devtools. 
 
-        install.packages("readr")   
+        install.packages("readr") # LinG3D built under version 2.1.2
 
-        install.packages("rapportools")
+        install.packages("rapportools") # LinG3D built under version 1.1
         
-        install.packages("rgl")
+        install.packages("rgl")  # LinG3D built under version 1.3.1
 
-        install.packages("devtools")
+        install.packages("devtools") # LinG3D built under version 2.4.5
    
         library(devtools)  # load the devtools library
 
